@@ -144,3 +144,8 @@
   width: 200px;
   height: 260px;
 }
+
+.tech-item:hover {
+  width: 250px;
+  height: 325px;
+}
