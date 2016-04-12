@@ -1,0 +1,146 @@
+  .container {
+  margin: auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.original img {
+  height: 260px;
+  width: 200px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.css3 h3 {
+  padding: 215px 20px 0 20px;
+  text-align: center;
+  color: #515151;
+  margin: 0;
+}
+
+.css3 {
+  height: 260px;
+}
+
+.css3>div {
+  height: 260px;
+  width: 202px;
+}
+
+.css3 .power-energy .rect {
+  background-color: #0557a3;
+  width: 200px;
+  height: 215px;
+  position: absolute;
+}
+
+.css3 .power-energy .circle {
+  border-color: #fff;
+  width: 120px;
+  height: 120px;
+  border-width: 7px;
+  border-style: solid;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  top: calc(50% - 60px);
+}
+
+.css3 .power-energy .zigzag-bg {
+  height: 30px;
+  width: 60px;
+  background-color: #0557a3;
+  position: absolute;
+  transform: rotate(-75deg);
+  top: 44px;
+  left: 72px;
+  z-index: 1;
+}
+
+.css3 .power-energy .zigzag-line {
+  height: 9px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 2;
+}
+
+.css3 .power-energy .zigzag-1 {
+  top: 60px;
+  width: 60px;
+  left: 70px;
+  transform: rotate(-75deg);
+}
+
+.css3 .power-energy .zigzag-2 {
+  width: 40px;
+  top: 86px;
+  left: 88px;
+  transform: skew(-15deg);
+}
+
+.css3 .power-energy .zigzag-3 {
+  width: 40px;
+  top: 105px;
+  left: 96px;
+  transform: rotate(-70deg);
+}
+
+.css3 .power-energy .zigzag-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid #fff;
+  transform: rotate(20deg);
+  top: 126px;
+  left: 91px;
+}
+
+.css3 .mobile-tech .rect {
+  background-color: #e45b15;
+  width: 200px;
+  height: 215px;
+  position: absolute;
+}
+
+.css3 .mobile-tech .rect .ipad {
+  border: 9px solid white;
+  border-top: 12px solid white;
+  border-bottom: 12px solid white;
+  border-radius: 10px;
+  width: 91px;
+  height: 130px;
+  top: 32px;
+  position: absolute;
+  left: 47px;
+}
+
+.css3 .mobile-tech .rect .ipad .button {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e45b15;
+  left: calc(50% - 5px);
+  bottom: -10px;
+}
+
+.css3 .mobile-tech .rect .ipad .display {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 3px;
+  margin-top: 25px;
+}
+
+.canvas {
+  height: 260px;
+}
+
+.canvas > div {
+  width: 200px;
+  height: 260px;
+}
