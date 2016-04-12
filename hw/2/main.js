@@ -1,11 +1,17 @@
 const w = 200, h = 260, capH = 45;
 
+/**
+ * Bootsraps js
+ */
 (function() {
   drawEnergy();
 
   drawMobile();
 })();
 
+/**
+ * Draw power and energy specialization ad
+ */
 function drawEnergy() {
   var ctx = document
             .getElementById("powerEnergyCanvas")
@@ -14,6 +20,10 @@ function drawEnergy() {
   drawCaption(ctx, "התמחות בהספק ואנרגיה");
 }
 
+/**
+ * Draw power and energy specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawEnergyLogo(ctx) {
   var bgColor = "#0557a3";
   drawFilledRect(ctx, bgColor, 0, 0, w, h - capH);
@@ -23,6 +33,9 @@ function drawEnergyLogo(ctx) {
   drawEnergyLogoArrow(ctx);
 }
 
+/**
+ * Draw mobile technologies specialization ad
+ */
 function drawMobile() {
   var ctx = document
             .getElementById("mobileTechCanvas")
@@ -31,12 +44,20 @@ function drawMobile() {
   drawCaption(ctx, "התמחות בתוכנה למערכות ניידות");
 }
 
+/**
+ * Draw mobile technologies specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawMobileLogo(ctx) {
   var bgColor = "#e45b15";
   drawFilledRect(ctx, bgColor, 0, 0, w, h - capH);
   drawIpad(ctx);
 }
 
+/**
+ * Draw zigzag background on power and energy specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawZigZagBg(ctx) {
   ctx.beginPath();
   ctx.moveTo(100, 20);
@@ -46,6 +67,10 @@ function drawZigZagBg(ctx) {
   ctx.stroke();
 }
 
+/**
+ * Draw caption on given canvas contex
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawCaption(ctx, text) {
   ctx.font = "16px Arial";
   ctx.fillStyle = '#515151';
@@ -53,6 +78,10 @@ function drawCaption(ctx, text) {
 
 }
 
+/**
+ * Draw zigzag on power and energy specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawEnergyLogoZigZag(ctx) {
   ctx.beginPath();
   ctx.moveTo(100, 20);
@@ -64,6 +93,10 @@ function drawEnergyLogoZigZag(ctx) {
   ctx.stroke();
 }
 
+/**
+ * Draw the circle on on power and energy specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawEnergyLogoCircle(ctx) {
   var centerX = w / 2,
       centerY = (h - capH) / 2,
@@ -76,6 +109,10 @@ function drawEnergyLogoCircle(ctx) {
   ctx.stroke();
 }
 
+/**
+ * Draw arrow on power and energy specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawEnergyLogoArrow(ctx) {
   ctx.beginPath();
   ctx.moveTo(95, 115);
@@ -86,17 +123,28 @@ function drawEnergyLogoArrow(ctx) {
   ctx.fill();
 }
 
+/**
+ * Draw zigzag background on power and energy specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawFilledRect(ctx, color, x, y, w, h) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, w, h);
 }
 
+/**
+ * Draw the ipad on mobile specialization logo
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawIpad(ctx) {
   drawIpadCorners(ctx);
   drawIpadButton(ctx);
   drawIpadDisplay(ctx);
 }
 
+/**
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawIpadCorners(ctx) {
   ctx.beginPath();
   ctx.strokeStyle = '#fff';
@@ -129,6 +177,9 @@ function drawIpadCorners(ctx) {
   ctx.stroke();
 }
 
+/**
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawIpadButton(ctx) {
   ctx.fillStyle = '#e45b15';
   ctx.beginPath();
@@ -136,6 +187,9 @@ function drawIpadButton(ctx) {
   ctx.fill();
 }
 
+/**
+ * @param  CanvasRenderingContext2D ctx
+ */
 function drawIpadDisplay(ctx) {
   ctx.font = "60px Arial";
   ctx.fillStyle = '#fff';
