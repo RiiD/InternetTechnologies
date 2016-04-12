@@ -47,7 +47,7 @@ function drawZigZagBg(ctx) {
 }
 
 function drawCaption(ctx, text) {
-  ctx.font = "20px Arial";
+  ctx.font = "16px Arial";
   ctx.fillStyle = '#515151';
   ctx.fillText(text,0,h - 20);
 
@@ -92,23 +92,52 @@ function drawFilledRect(ctx, color, x, y, w, h) {
 }
 
 function drawIpad(ctx) {
+  drawIpadCorners(ctx);
+  drawIpadButton(ctx);
+  drawIpadDisplay(ctx);
+}
+
+function drawIpadCorners(ctx) {
   ctx.beginPath();
   ctx.strokeStyle = '#fff';
-  ctx.lineWidth = 9;
+  ctx.lineWidth = 10;
 
-  ctx.moveTo(47, 32);
-  ctx.lineTo(153, 32);
+  ctx.arc(56, 35, 5, 1 * Math.PI, 1.5 * Math.PI);
+  ctx.moveTo(55, 30);
+  ctx.lineTo(144, 30);
+  ctx.arc(144, 35, 5, 1.5 * Math.PI, 2 * Math.PI);
   ctx.stroke();
 
+  ctx.beginPath();
+  ctx.moveTo(150, 35);
   ctx.lineWidth = 7;
-  ctx.lineTo(153, 162);
+  ctx.lineTo(150, 155);
   ctx.stroke();
 
-  ctx.lineWidth = 9;
-  ctx.lineTo(47, 162);
+  ctx.beginPath();
+  ctx.arc(144, 155, 5, 0, 0.5 * Math.PI);
+  ctx.moveTo(145, 160);
+  ctx.lineWidth = 10;
+  ctx.lineTo(55, 160);
+  ctx.arc(56, 155, 5, 0.5 * Math.PI, 1 * Math.PI);
   ctx.stroke();
 
-  ctx.closePath();
+  ctx.beginPath();
+  ctx.moveTo(50, 155);
+  ctx.lineTo(50, 35);
   ctx.lineWidth = 7;
   ctx.stroke();
+}
+
+function drawIpadButton(ctx) {
+  ctx.fillStyle = '#e45b15';
+  ctx.beginPath();
+  ctx.arc(100, 160, 3, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+function drawIpadDisplay(ctx) {
+  ctx.font = "60px Arial";
+  ctx.fillStyle = '#fff';
+  ctx.fillText("</>", 56, 113);
 }
